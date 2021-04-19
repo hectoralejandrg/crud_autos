@@ -92,8 +92,8 @@ function actionButtonEdit(id){
     changeEditButton(id);
 }
 
-function summitForm(){
-    const button = getSummitButton();
+function submitForm(){
+    const button = getSubmitButton();
     if(button.textContent.trim() === 'Editar'){
         updateCar(button.value);
     }else{
@@ -103,7 +103,7 @@ function summitForm(){
 }
 /*************Change Button form ******************/
 function changeEditButton(id){
-    const button = getSummitButton();
+    const button = getSubmitButton();
     button.textContent = ' Editar';
     button.insertAdjacentHTML('afterbegin','<i class="fas fa-edit"></i>');
     button.classList.remove('btn-success');
@@ -112,7 +112,7 @@ function changeEditButton(id){
 }
 
 function changeSaveButton(){
-    const button = getSummitButton();
+    const button = getSubmitButton();
     button.textContent = ' Guardar';
     button.insertAdjacentHTML('afterbegin','<i class="fas fa-save"></i>');
     button.classList.add('btn-success');
@@ -130,8 +130,8 @@ function generatedId(){
     return biggerId+=1;
 }
 
-function getSummitButton(){
-    return document.getElementById('btn-summit-form');
+function getSubmitButton(){
+    return document.getElementById('btn-submit-form');
 }
 
 printCars(cars);
